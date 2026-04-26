@@ -146,3 +146,20 @@ void TFT_eSPI_Scroll::reset(){
     delete sprite;
     cursor = 0;
 }
+
+/*
+** @name clear
+** @brief Clear the screen and set the cursor to the top (0)
+*/
+void TFT_eSPI_Scroll::clear(){
+    sprite->fillScreen(bg_color);
+    cursor = 0;
+}
+
+/*
+** @name refresh
+** @brief Refresh the screen by placing the contents of the sprite on to the display
+*/
+void TFT_eSPI_Scroll::refresh(){
+    sprite->pushSprite(0, 0);
+}
