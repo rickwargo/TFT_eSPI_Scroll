@@ -80,6 +80,18 @@ public:
   */
   void reset();
 
+  /*
+  ** @name clear
+  ** @brief Clear the screen and set the cursor to the top (0)
+  */
+  void clear();
+
+  /*
+  ** @name refresh
+  ** @brief Refresh the screen by placing the contents of the sprite on to the display
+  */
+  void refresh();
+
 private:
   // Scrolls the screen by shifting all lines by -1
   void shift(int text_width);
